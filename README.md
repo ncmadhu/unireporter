@@ -14,7 +14,7 @@ Used to docker to tie up all the below components
 4. Test framework container -  Develop a container specific for your test framework to start the test, parse the test reports
    and add the results to mongodb. Add your test framework container specific rabbitmq message format apis in node.js and URLS
    Add your contaner image in docker-compose.yml. In my example I have used robot framework in my example code.
-5. Start your containers in step using docker-compose up
+5. Start your containers in one step using docker-compose up
 
 # To install docker
 
