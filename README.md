@@ -20,7 +20,7 @@ Used to docker to tie up all the below components
 
 https://docs.docker.com/engine/installation/linux/ubuntu/#os-requirements
 
-#To install docker-compose use below link
+# To install docker-compose use below link
 
 https://docs.docker.com/compose/install/
 
