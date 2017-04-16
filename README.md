@@ -24,7 +24,7 @@ Used docker to tie up all the below components
       3. Add your framework specific urls and messaging code in node.js
       4. Write a Docker file for your test framework
       4. Add your framework container details in docker-compose.yml
-5. Start your containers in one step using #docker-compose up
+5. Start your containers in one step using docker-compose up
 
 # To install docker
 
