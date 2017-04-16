@@ -1,0 +1,73 @@
+version: "2"
+
+services:
+
+  ovrabbitmq:
+    image: 'rabbitmq:latest'
+    hostname: ovrabbitmq
+    container_name: "ovrabbitmq"
+    environment:
+     - RABBITMQ_DEFAULT_USER=oneview
+     - RABBITMQ_DEFAULT_PASS=oneview
+    ports:
+     - 15672:15672
+     - 5672:5672
+    networks:
+     - oneview
+    volumes:
+     - ./rabbitmq:/var/lib/rabbitmq
+     
+  ovmongodb:
+    image: 'mongo:latest'
+    hostname: ovmongodb
+    container_name: "ovmongodb"
+    command:
+        - --storageEngine=wiredTiger
+    ports:
+     - 27017:27017
+    networks:
+     - oneview
+    volumes:
+     - ./mongodb/data/db:/data/db
+ 
+  ovui:
+    build: ./ui
+    image: node-app:latest
+    hostname: ovui 
+    container_name: "ovui"
+    command: node index.js
+    ports:
+     - "4000:4000"
+    networks:
+     - oneview
+    volumes:
+     - ./logs:/usr/src/oneview/log
+    depends_on:
+     - ovmongodb
+     - ovrabbitmq
+    links:
+     - ovmongodb
+     - ovrabbitmq
+     
+  ovrobot:
+    build: ./oneview/robotFwEngine
+    image: robot-app:latest
+    hostname: ovrobot 
+    container_name: "ovrobot"
+    command: ["./start.sh", "20"]
+    networks:
+     - oneview
+    volumes:
+     - ./logs:/usr/src/oneview/log
+    depends_on:
+     - ovmongodb
+     - ovrabbitmq
+    links:
+     - ovmongodb
+     - ovrabbitmq
+
+networks:
+  oneview:
+    driver: bridge
+
+

@@ -1,0 +1,6 @@
+{
+    "host": "192.168.2.9",
+    "test-suite": "/home/madhu/robot/demo.robot",
+    "exchange": "robot",
+    "routingKey": "start"
+}

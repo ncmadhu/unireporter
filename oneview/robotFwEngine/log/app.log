@@ -1,0 +1,10 @@
+'16/04/2017 01:28:28 PM' - appLogger - INFO - Info Starting App
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Loading configuration
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Config Sections: ['RabbitMQ', 'MongoDB', 'Framework', 'Executor', 'ReportFiles']
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Initializing rabbitMQ config
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Initializing MongoDb config
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Init Mongo connection
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Connecting to Mongo
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Getting collection suites from robot
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Creating Index Model
+'16/04/2017 01:28:28 PM' - appLogger - DEBUG - Creating Indexes

@@ -1,0 +1,33 @@
+{
+    "server": {
+        "port": 4000
+    },
+    "logger": {
+        "level": "debug",
+        "logFile": "./log/server.log"
+    },
+    "frameworks": [
+        "framework1",
+        "framework2"
+    ],
+    "framework1": {
+        "module": "framework1",
+        "reports": "framework1"
+    },
+    "framework2": {
+        "module": "framework2",
+        "reports": "framework2"
+    },
+    "mongodb": {
+        "host": "ovmongodb",
+        "port": 27017
+    },
+    "rabbitmq": {
+        "host": "ovrabbitmq",
+        "port": 5672,
+        "username": "oneview",
+        "password": "oneview",
+        "sendqueue": "task",
+        "receivequeue": "status"
+    }
+}

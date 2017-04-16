@@ -1,0 +1,5 @@
+paramiko
+pymongo
+pika
+configParser
+xmltodict
