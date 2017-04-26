@@ -42,6 +42,7 @@ services:
      - oneview
     volumes:
      - ./logs:/usr/src/oneview/log
+     - ./config:/usr/src/oneview/config
     depends_on:
      - ovmongodb
      - ovrabbitmq
