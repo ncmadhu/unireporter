@@ -38,7 +38,11 @@ Docker compose needs docker api version greater than 1.10.0
 
 # Passwordless ssh access Example setup
 ssh-keygen -t rsa
+
 ssh ansible@192.168.56.101 mkdir -p .ssh
+
 cat ~/.ssh/ansible_rsa.pub | ssh ansible@192.168.56.101 'cat >> .ssh/authorized_keys'
+
 ssh ansible@192.168.56.101 "chmod 700 .ssh; chmod 640 .ssh/authorized_keys"
+
 ssh ansible@192.168.56.101
