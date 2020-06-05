@@ -1,0 +1,14 @@
+ind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: test
+  commands:
+  - echo "Working"
+  - echo "Roger"
+
+trigger:
+  branch:
+  - master
